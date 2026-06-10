@@ -2,8 +2,13 @@
 
 An autonomous **obstacle-avoiding maze-solving robot** built on an **ESP32**, navigating using three **HC-SR04 ultrasonic rangefinders** (left / front / right). A reactive **state-based controller** converts continuous distance readings into discrete wall states and drives a **finite-state navigation policy** with real-time Bluetooth Serial telemetry.
 
-🎥 **Demo:** [`docs/demo.md`](docs/demo.md)
-![Obstacle Bot](docs/images/obstacle_bot.jpg)
+<p align="center">
+  <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">
+    <img src="docs/images/obstacle_bot.jpg" width="520" alt="Watch this short demo"/>
+  </a>
+  <br/>
+  <em>▶️ Click the image to watch the demo on YouTube</em>
+</p>
 
 ---
 
@@ -30,8 +35,6 @@ An autonomous **obstacle-avoiding maze-solving robot** built on an **ESP32**, na
 | Power                  | 2S Li-ion 7.4 V               |
 | Regulator              | LM2596 buck (7.4 V → 5 V)     |
 
-Full BOM in [`docs/BOM.md`](docs/BOM.md). Pinout in [`docs/wiring.md`](docs/wiring.md).
-
 ---
 
 ## 🧠 Navigation Logic
@@ -46,23 +49,12 @@ The continuous distance from each sensor is thresholded into a binary "wall pres
 | `1 1 1`         | **Stop**          | Dead-end — full block                       |
 | *otherwise*     | Forward (default) | Conservative fallback                       |
 
-See [`docs/state_machine.md`](docs/state_machine.md) for the full Mermaid state diagram.
 
 ---
 
 ## 📡 Telemetry
 
 Bluetooth Serial (device name: `MazeBot_Logic_Update`) streams state transitions in real time. Pair from a phone Bluetooth terminal app to watch decisions live.
-
----
-
-## 🔌 Pinout
-
-| Signal       | GPIO | Signal      | GPIO |
-| ------------ | ---- | ----------- | ---- |
-| PWMA / AIN1 / AIN2 | 23 / 21 / 22 | PWMB / BIN1 / BIN2 | 16 / 18 / 4 |
-| TRIG_L / ECHO_L    | 27 / 26      | TRIG_R / ECHO_R    | 32 / 35     |
-| TRIG_F / ECHO_F    | 25 / 33      |                    |             |
 
 ---
 
