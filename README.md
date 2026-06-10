@@ -4,7 +4,7 @@ An autonomous **obstacle-avoiding maze-solving robot** built on an **ESP32**, na
 
 <p align="center">
   <a href="https://youtu.be/XvG3TrTDW1Y" target="_blank">
-    <img src="docs/images/obstacle_bot.jpeg" width="520" alt="Watch this short demo"/>
+    <img src="docs/images/obstacle_bot.jpg" width="520" alt="Watch this short demo"/>
   </a>
   <br/>
   <em>▶️ Click the image to watch the demo on YouTube</em>
