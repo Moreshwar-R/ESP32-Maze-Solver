@@ -3,8 +3,8 @@
 An autonomous **obstacle-avoiding maze-solving robot** built on an **ESP32**, navigating using three **HC-SR04 ultrasonic rangefinders** (left / front / right). A reactive **state-based controller** converts continuous distance readings into discrete wall states and drives a **finite-state navigation policy** with real-time Bluetooth Serial telemetry.
 
 <p align="center">
-  <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">
-    <img src="docs/images/obstacle_bot.jpg" width="520" alt="Watch this short demo"/>
+  <a href="https://youtu.be/XvG3TrTDW1Y" target="_blank">
+    <img src="docs/images/obstacle_bot.jpeg" width="520" alt="Watch this short demo"/>
   </a>
   <br/>
   <em>▶️ Click the image to watch the demo on YouTube</em>
