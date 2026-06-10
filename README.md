@@ -14,13 +14,12 @@ An autonomous **obstacle-avoiding maze-solving robot** built on an **ESP32**, na
 
 ## ✨ Highlights
 
-- **Three-sensor ultrasonic perception** — left / front / right HC-SR04 array
-- **Discretized world model** — continuous range → binary wall states via threshold (15 cm)
-- **Reactive FSM** — Forward / Adjust-Left / Adjust-Right / Full-Block-Stop
-- **Pivot-turn correction loop** — bot rotates until front sensor clears wall
-- **Live telemetry over Bluetooth Serial** for in-field debugging without USB tether
-- **Hardware PWM** via ESP32 LEDC for smooth speed control on the TB6612FNG driver
-- Echo timeout handling (treats `pulseIn` timeouts as "no wall" instead of garbage data)
+- **Three-sensor ultrasonic perception** — left / front / right HC-SR04 array.
+- **Discretized world model** — continuous range → binary wall states via threshold (15 cm).
+- **Reactive FSM** — Forward / Adjust-Left / Adjust-Right / Full-Block-Stop.
+- **Pivot-turn correction loop** — bot rotates until front sensor clears wall.
+- **Live telemetry over Bluetooth Serial** for in-field debugging without USB tether.
+- Echo timeout handling (treats `pulseIn` timeouts as "no wall" instead of garbage data).
 
 ---
 
@@ -60,10 +59,10 @@ Bluetooth Serial (device name: `MazeBot_Logic_Update`) streams state transitions
 
 ## 🚀 Future Work
 
-- Replace reactive FSM with **flood-fill** or **DFS-with-backtracking** for true shortest-path maze solving
-- Add **wheel encoders** for closed-loop odometry
-- Migrate sensor stack to **VL53L0X ToF** for tighter, faster ranging
-- Custom **KiCad PCB** integrating ESP32, TB6612FNG, and sensor headers
+- Replace reactive FSM with **flood-fill** or **DFS-with-backtracking** for true shortest-path maze solving.
+- Add **wheel encoders** for closed-loop odometry.
+- Migrate sensor stack to **VL53L0X ToF** for tighter, faster ranging.
+- Custom **KiCad PCB** integrating ESP32, TB6612FNG, and sensor headers.
 
 ---
 
